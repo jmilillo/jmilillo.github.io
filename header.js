@@ -1,16 +1,19 @@
-const headerTemplate = document.createElement('template');
+async function loadHeader() {
+    try {
+      const response = await fetch('header.html');
+      const headerHtml = await response.text();
 
-headerTemplate.innerHTML = `
-  <header style="display: flex; justify-content: space-between; align-items: center; padding: 20px; ">
-    <div class="logo-container">
-      <a href="index.html" style="font-weight: bold; text-decoration: none; color: #333;">
-        <img src="emotionalFeelingLogo.png" alt="James Milillo" class="logo-img"">
-        <h1 class="logo-text">
-            James Milillo<span class="domain">.com</span>
-        </h1>
-      </a>
-    </div>
-  </header>
-`;
+      // Create a safe temporary container node
+      const tempContainer = document.createElement('div');
+      tempContainer.innerHTML = headerHtml;
 
-document.body.prepend(headerTemplate.content);
+      // Grab the actual header node and prepend it to the body
+      const headerNode = tempContainer.querySelector('header');
+      document.body.prepend(headerNode);
+    } catch (error) {
+      console.error('Error loading the global header component:', error);
+    }
+  }
+
+  // Fire the loader immediately when the script runs
+  loadHeader();
