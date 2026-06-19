@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Cardo';
+    src: url('cardo_normal_400.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.logo-container {
+    display: flex;
+    align-items: center;    /* Vertically centers the text with the image */
+    gap: 20px;              /* Puts clean space between the logo and text */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* Clean modern font */
+  }
+
+  .logo-img {
+    width: 60px;            /* Adjust size as needed */
+    height: auto;
+  }
+
+  .logo-text {
+    font-size: 22px;        /* Makes the name large and bold */
+    font-weight: 800;
+    color: #111111;         /* Dark black for the main name */
+    margin: 0;              /* Removes default heading margins */
+  }
+
+  .domain {
+    font-size: 14px;
+    color: #666666;         /* Lighter gray color for '.com' */
+    font-weight: 400;       /* Makes '.com' slightly thinner than the name */
+  }
+
+  .header-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none; /* Removes the underline */
+  }
+
+  .main-title {
+    color: rgb(17, 17, 17);
+    display: block;
+    font-family: Cardo;
+    font-size: 38.25317px;
+    font-style: normal;
+    font-weight: 400;
+    height: 45px;
+    line-height: 45.903805px;
+    margin-block-end: 0px;
+    margin-block-start: 19.1875px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .apps-grid {
+    display: grid;
+    /* Automatically wraps cards and snaps columns based on space */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    align-items: start;
+    max-width: 900px; /* Limits maximum stretch for a 2-column look */
+    margin: 0 auto;
+  }
+
+  .app-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .app-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .app-internal-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+  }
+
+  /* Element Sizing & Typography */
+  .app-logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 5px;
+  }
+
+  .app-title {
+    font-family: Cardo; /* Matches the editorial serif font in the image */
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0 0 8px 0;
+    white-space: nowrap;
+  }
+
+  .app-tagline {
+    font-style: italic;
+    font-size: 1rem;
+    color: #555555;
+    margin: 0 0 25px 0;
+  }
+
+  .app-availability {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+  }
+
+  .badge-link:hover {
+    opacity: 0.8; /* Makes the badge dim slightly when hovered */
+  }
+
+  .app-store-badge {
+    width: 140px;
+    height: auto;
+    display: block;
+  }
