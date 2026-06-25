@@ -37,7 +37,7 @@
   .header-link {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 6px;
     text-decoration: none; /* Removes the underline */
   }
 
@@ -125,7 +125,7 @@
   }
 
   .badge-link:hover {
-    opacity: 0.8; /* Makes the badge dim slightly when hovered */
+    opacity: 0.7; /* Makes the badge dim slightly when hovered */
   }
 
   .app-store-badge {
@@ -150,7 +150,7 @@
   }
 
   .page-content {
-    max-width: 720px;
+    max-width: 620px;
     margin: 0 auto;
     padding: 40px 20px 80px;
     text-align: left;
@@ -187,6 +187,63 @@
 
   .page-content a {
     color: #111111;
+  }
+
+  .page-content h1:has(+ .app-tagline) {
+    margin-bottom: 0rem;
+  }
+
+  .page-content .app-tagline {
+    text-align: center;
+    margin: 0 0 1rem;
+  }
+
+  .page-content .app-availability {
+    text-align: center;
+    padding-top: 12px;
+  }
+
+  .page-content .badge-link {
+    display: flex;
+    justify-content: center;
+  }
+
+  body.support-page {
+    background-color: #f9f9f9;
+  }
+
+  .support-email-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    margin-top: 2rem;
+    border-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  .support-email {
+    font-family: Cardo, serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: #111111;
+    text-decoration: none;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    padding-top: 45px;
+    box-sizing: border-box;
+  }
+
+  /* 2. Scale the image responsively */
+  .image-container img {
+    max-width: 100%;
+    height: auto;            /* Maintains aspect ratio so it doesn't stretch */
+    object-fit: contain;     /* Prevents distortion */
+    border-radius: 12px;
   }
 
   @media (max-width: 600px) {
