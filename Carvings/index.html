@@ -1,1 +1,53 @@
-placeholder
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Carvings & Paintings</title>
+
+    <script src="/spotlight.bundle.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header class="logo-container">
+        <!-- Left Side: Links back home -->
+        <a href="/index.html" class="header-link">
+            <img src="logo.webp" alt="app logo" class="logo-img">
+            <h1 class="logo-text">
+                James Milillo<span class="domain">.com</span>
+            </h1>
+        </a>
+    </header>
+
+    <!-- 2. The Grid Container -->
+    <div class="gallery">
+        <!-- Wrap each image in an anchor tag with class="spotlight" -->
+        <a class="spotlight" href="cardinal2.webp" data-title="Wood Carving #10" data-description="Basswood cardinal">
+            <img src="cardinal2.webp" alt="Cardinal">
+        </a>
+
+        <a class="spotlight" href="bluejay.webp" data-title="Wood Carving #9" data-description="Basswood blue jay">
+            <img src="bluejay.webp" alt="Blue Jay">
+        </a>
+
+        <a class="spotlight" href="graduationcap.webp" data-title="Wood Carving #14" data-description="Basswood graduation cap">
+            <img src="graduationcap.webp" alt="Lighthouse">
+        </a>
+
+        <a class="spotlight" href="lighthouse42.webp" data-title="Wood Carving #13" data-description="Poplar lighthouse">
+            <img src="lighthouse42.webp" alt="Graduation Cap">
+        </a>
+
+        <a class="spotlight" href="hotdog.webp" data-title="Wood Carving #6" data-description="Poplar hotdog">
+            <img src="hotdog.webp" alt="Scared Hotdog">
+        </a>
+
+        <a class="spotlight" href="carvings.webp" data-title="Random Carvrings" data-description="Other stuff I've done in Oak, Poplar and Basswood">
+            <img src="carvings.webp" alt="Random stuff">
+        </a>
+
+        <!-- Repeat this anchor block for your remaining photos -->
+    </div>
+</body>
+</html>

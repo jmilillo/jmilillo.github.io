@@ -258,3 +258,49 @@
       gap: 20px;
     }
   }
+
+  /* Center your heading */
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-family: sans-serif;
+}
+
+/* Spotlight Configuration */
+/* 1. The Centered Grid Layout Container */
+.gallery {
+  display: grid;
+  /* Force exactly 3 columns across on desktop screens */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px; /* Clean spacing between artwork pieces */
+  max-width: 1000px; /* Prevents the grid from spreading too wide on massive screens */
+  margin: 40px auto; /* Centers the whole gallery container horizontally on the page */
+  padding: 0 20px; /* Prevents thumbnails from touching screen edges on mobile */
+}
+
+/* 2. Image Thumbnail Framing */
+.gallery img {
+  width: 100%;
+  /* Keep a clean, uniform square shape for all of your artwork frames */
+  aspect-ratio: 1 / 1;
+  object-fit: cover; /* Crops the images cleanly inside the frames without squishing them */
+  border-radius: 12px; /* Smooth rounded corners matching your current style */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Adds a subtle shadow depth */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 3. Subtle Hover Animation */
+.gallery img:hover {
+  transform: translateY(-4px); /* Gently raises the carving up when hovered */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deepens the shadow on hover */
+}
+
+/* 4. Responsive View for Mobile Phones */
+@media (max-width: 768px) {
+  .gallery {
+      /* Drop down to 2 columns on tablets, or 1 column on smaller smartphones */
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+  }
+}
