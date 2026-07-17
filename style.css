@@ -45,7 +45,7 @@
     color: rgb(17, 17, 17);
     display: block;
     font-family: Cardo;
-    font-size: 38.25317px;
+    font-size: 48px;
     font-style: normal;
     font-weight: 400;
     height: 45px;
@@ -97,15 +97,15 @@
 
   /* Element Sizing & Typography */
   .app-logo {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
     object-fit: contain;
     margin-bottom: 5px;
   }
 
   .app-title {
     font-family: Cardo; /* Matches the editorial serif font in the image */
-    font-size: 2.2rem;
+    font-size: 40px;
     font-weight: 400;
     margin: 0 0 8px 0;
     white-space: nowrap;
