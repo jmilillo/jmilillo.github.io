@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelf Control</title>
+    <script src="/spotlight.bundle.js"></script>
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -42,9 +43,17 @@
                 class="badge-link">
                 <img src="/appStoreBadge.webp" alt="Download on the App Store" class="app-store-badge">
             </a>
-            <div class="image-container">
-                <img src="app-spread.webp">
+            <!-- Tapping the spread opens a Spotlight gallery of the full-size screenshots -->
+            <div class="image-container spotlight-group">
+                <a class="spotlight spread-link" href="screenshots/intro.webp" data-title="Shelf Control" data-description="your essential shopping companion">
+                    <img src="app-spread.webp" alt="Shelf Control screenshots">
+                </a>
+                <a class="spotlight" href="screenshots/route.webp" data-title="Shop by Route" data-description="Zero backtracking, no forgotten items" hidden></a>
+                <a class="spotlight" href="screenshots/stores.webp" data-title="Every Store, Sorted" data-description="Multi-store organization" hidden></a>
+                <a class="spotlight" href="screenshots/trends.webp" data-title="Track your Trends" data-description="Visualize your spending, see your time saved" hidden></a>
+                <a class="spotlight" href="screenshots/settings.webp" data-title="Total Shelf Control" data-description="Customizable experience, organize it your way" hidden></a>
             </div>
+            <p class="spread-hint">Tap the screenshots to see them up close</p>
         </div>
 
     </main>

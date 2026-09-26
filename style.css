@@ -327,3 +327,50 @@ h1 {
       gap: 16px;
   }
 }
+
+/* Store badge shown before an app is released */
+.badge-inactive {
+  opacity: 0.35;
+  filter: grayscale(1);
+  cursor: default;
+}
+
+.badge-inactive:hover {
+  opacity: 0.35;
+}
+
+/* Spread that opens a Spotlight gallery of screenshots */
+.spread-link img {
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spread-link img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.spread-hint {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #888888;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* History section that follows an app's main content */
+.page-content:has(+ .history) {
+  padding-bottom: 20px;
+}
+
+.page-content.history {
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.page-content.history h2 {
+  text-align: center;
+  font-family: "Cardo", Georgia, serif;
+  font-weight: 400;
+  margin: 0 0 1rem;
+}

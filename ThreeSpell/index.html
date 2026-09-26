@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Three Spell</title>
+    <script src="/spotlight.bundle.js"></script>
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -21,39 +22,58 @@
         </a>
 
         <!-- Right Side: Navigation unique to this app page -->
-        <!-- <nav class="header-nav">
+        <nav class="header-nav">
             <a href="privacy.html" class="nav-link">Privacy Policy</a>
             <a href="support.html" class="nav-link">Support</a>
-        </nav> -->
+        </nav>
     </header>
 
     <main class="container">
-        <!-- Your app page content goes here -->
         <div class="page-content">
-
             <h1>Three Spell</h1>
             <p class="app-tagline">Built for the smallest speller in the house.</p>
+            <p>Three Spell turns the family fridge into a spelling game. Kids drag magnet letters to build three
+                letter words, match words to pictures, piece together word puzzles, and earn coins to unlock new
+                words for their very own magnet fridge. Settings grow with your speller, from letter hints for
+                beginners to full words for confident readers.</p>
+            <p class="app-availability">Coming soon to the App Store, made for ages 4–8, and collects no personal
+                data.</p>
+
+            <!-- TODO: at release, swap this span for the live link:
+                <a href="https://apps.apple.com/us/app/three-spell/idXXXXXXXXXX" target="_blank" rel="noopener" class="badge-link"> -->
+            <span class="badge-link badge-inactive" aria-disabled="true" title="Coming soon">
+                <img src="/appStoreBadge.webp" alt="Coming soon to the App Store" class="app-store-badge">
+            </span>
+
+            <!-- Tapping the spread opens a Spotlight gallery of the full-size screenshots -->
+            <div class="image-container spotlight-group">
+                <a class="spotlight spread-link" href="screenshots/spell.webp" data-title="Spell!" data-description="Drag letters to build words">
+                    <img src="app-spread.webp" alt="Three Spell screenshots: spell, win, create, read, puzzle, collect, save, grow, safe">
+                </a>
+                <a class="spotlight" href="screenshots/win.webp" data-title="Win!" data-description="Cheers for every word" hidden></a>
+                <a class="spotlight" href="screenshots/create.webp" data-title="Create!" data-description="Your own magnet fridge" hidden></a>
+                <a class="spotlight" href="screenshots/read.webp" data-title="Read!" data-description="Find the matching picture" hidden></a>
+                <a class="spotlight" href="screenshots/puzzle.webp" data-title="Puzzle!" data-description="Puzzles that teach words" hidden></a>
+                <a class="spotlight" href="screenshots/collect.webp" data-title="Collect!" data-description="Unlock new words with coins" hidden></a>
+                <a class="spotlight" href="screenshots/save.webp" data-title="Save!" data-description="Earn coins for every word" hidden></a>
+                <a class="spotlight" href="screenshots/grow.webp" data-title="Grow!" data-description="Settings that grow with kids" hidden></a>
+                <a class="spotlight" href="screenshots/safe.webp" data-title="Safe!" data-description="Ages 4–8 · No data collected" hidden></a>
+            </div>
+            <p class="spread-hint">Tap the screenshots to see them up close</p>
+        </div>
+
+        <div class="page-content history">
+            <h2>A Little History</h2>
             <p>This one goes back further than the rest. I wrote the first version in Objective-C, on an iPhone
                 3, as a spelling app for my daughter. It's been sitting in a drawer ever since, and I've slowly
                 been rebuilding and improving it whenever I get the itch.</p>
-            <p class="app-availability">Someday, on the App Store. No promises on when.</p>
             <p class="app-availability"><a href="evolution/">See how iCanRead evolved into Three Spell.</a></p>
-
-
-            <!-- <a href="https://apps.apple.com/us/app/shelf-control/id6767031027" target="_blank" rel="noopener"
-                class="badge-link">
-                <img src="/appStoreBadge.webp" alt="Download on the App Store" class="app-store-badge">
-            </a>
-            <div class="image-container">
-                <img src="app-spread.webp">
-            </div> -->
         </div>
 
         <div class="app-icon-frame">
             <img src="icon57.png" alt="Three Spell app icon" class="app-icon-img">
             <p class="app-icon-caption">The original icon, from the Objective-C days</p>
         </div>
-
     </main>
 
 </body>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Tips</title>
+    <script src="/spotlight.bundle.js"></script>
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -44,9 +45,17 @@
                 class="badge-link">
                 <img src="/appStoreBadge.webp" alt="Download on the App Store" class="app-store-badge">
             </a>
-            <div class="image-container">
-                <img src="app-spread.webp">
+            <!-- Tapping the spread opens a Spotlight gallery of the full-size screenshots -->
+            <div class="image-container spotlight-group">
+                <a class="spotlight spread-link" href="screenshots/intro.webp" data-title="Tip Tips" data-description="your total-total companion">
+                    <img src="app-spread.webp" alt="Tip Tips screenshots">
+                </a>
+                <a class="spotlight" href="screenshots/discover.webp" data-title="Discover" data-description="Find totals with repeating digits in seconds." hidden></a>
+                <a class="spotlight" href="screenshots/refine.webp" data-title="Refine" data-description="Fine tune your tip to reach the perfect total." hidden></a>
+                <a class="spotlight" href="screenshots/visualize.webp" data-title="Visualize" data-description="Choose the display style you like best." hidden></a>
+                <a class="spotlight" href="screenshots/enjoy.webp" data-title="Enjoy" data-description="The little things that make you smile." hidden></a>
             </div>
+            <p class="spread-hint">Tap the screenshots to see them up close</p>
         </div>
 
     </main>

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emotional Feeling</title>
+    <script src="/spotlight.bundle.js"></script>
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -41,9 +42,17 @@
                 class="badge-link">
                 <img src="/appStoreBadge.webp" alt="Download on the App Store" class="app-store-badge">
             </a>
-            <div class="image-container">
-                <img src="app-spread.webp">
+            <!-- Tapping the spread opens a Spotlight gallery of the full-size screenshots -->
+            <div class="image-container spotlight-group">
+                <a class="spotlight spread-link" href="screenshots/intro.webp" data-title="Emotional Feeling" data-description="your emotional intelligence companion">
+                    <img src="app-spread.webp" alt="Emotional Feeling screenshots">
+                </a>
+                <a class="spotlight" href="screenshots/embark.webp" data-title="Embark" data-description="on a journey for emotional clarity, self-awareness, and a profound sense of positivity and well-being" hidden></a>
+                <a class="spotlight" href="screenshots/track.webp" data-title="Track" data-description="how you are feeling at any point throughout the day" hidden></a>
+                <a class="spotlight" href="screenshots/review.webp" data-title="Review" data-description="past emotions and journal entries" hidden></a>
+                <a class="spotlight" href="screenshots/customize.webp" data-title="Customize" data-description="the app to personalize your experience" hidden></a>
             </div>
+            <p class="spread-hint">Tap the screenshots to see them up close</p>
         </div>
 
     </main>
