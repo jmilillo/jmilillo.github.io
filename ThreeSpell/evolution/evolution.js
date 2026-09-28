@@ -19,8 +19,10 @@
     if (reduceMotion.matches) return;
     const rect = section.getBoundingClientRect();
     const travel = Math.max(1, section.offsetHeight - innerHeight);
-    const p = clamp(-rect.top / travel);
-    root.style.setProperty('--progress', p);
+    const scrolled = clamp(-rect.top / travel);
+    // Timings below were authored with a lead-in before the first button moves; skip it so scrolling responds at once.
+    const p = mix(.15, 1, scrolled);
+    root.style.setProperty('--progress', scrolled);
     const menuDevice = smooth(range(p, .66, .90));
     stage.style.setProperty('--menu-device-x', mix(.70, 1, menuDevice));
     stage.style.setProperty('--menu-device-y', mix(.66, 1, menuDevice));
@@ -79,6 +81,31 @@
     }
   }
   function requestUpdate() { if (!scheduled) { scheduled = true; requestAnimationFrame(update); } }
+
+  // Dragging a timeline scrubs its section by scrolling the page to the matching point.
+  function makeScrubbable(track, scrollSection) {
+    if (!track || !scrollSection) return;
+    const seek = (event) => {
+      const bar = track.getBoundingClientRect();
+      const fraction = clamp((event.clientX - bar.left) / bar.width);
+      const sectionTop = scrollSection.getBoundingClientRect().top + scrollY;
+      const travel = Math.max(1, scrollSection.offsetHeight - innerHeight);
+      scrollTo({ top: sectionTop + fraction * travel, behavior: 'instant' });
+    };
+    track.addEventListener('pointerdown', (event) => {
+      event.preventDefault();
+      track.setPointerCapture(event.pointerId);
+      track.classList.add('scrubbing');
+      seek(event);
+    });
+    track.addEventListener('pointermove', (event) => { if (track.hasPointerCapture(event.pointerId)) seek(event); });
+    const stop = () => track.classList.remove('scrubbing');
+    track.addEventListener('pointerup', stop);
+    track.addEventListener('pointercancel', stop);
+  }
+  makeScrubbable(document.querySelector('.timeline i'), section);
+  makeScrubbable(document.querySelector('.game-timeline i'), gameSection);
+
   addEventListener('scroll', requestUpdate, { passive: true });
   addEventListener('resize', requestUpdate, { passive: true });
   reduceMotion.addEventListener('change', requestUpdate);
