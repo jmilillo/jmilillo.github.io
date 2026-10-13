@@ -328,6 +328,11 @@ h1 {
   }
 }
 
+/* Lets Spotlight descriptions break onto a second line with &#10; */
+.spl-description {
+  white-space: pre-line;
+}
+
 /* Store badge shown before an app is released */
 .badge-inactive {
   opacity: 0.35;
