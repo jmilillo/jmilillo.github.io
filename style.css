@@ -208,6 +208,10 @@
     justify-content: center;
   }
 
+  body {
+    background-color: #ffffff;    /* Don't rely on the browser's default canvas color */
+  }
+
   body.support-page {
     background-color: #f9f9f9;
   }
